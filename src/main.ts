@@ -12,7 +12,7 @@ async function bootstrap() {
   app.useGlobalPipes(new ValidationPipe());
 
   // set base path
-  app.setGlobalPrefix('browser_auto/api/v1');
+  app.setGlobalPrefix('/');
 
   // swagger config
   const config = new DocumentBuilder()

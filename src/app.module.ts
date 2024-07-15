@@ -4,7 +4,7 @@ import { CoreModule } from './core/core.module';
 // import { DatabaseModule } from './database/database.module';
 import configuration from './config/configuration';
 import { ConfigService } from '@nestjs/config';
-
+import { EventsModule } from './events/events.module';
 import { LoggerMiddleware } from './common/middleware/logger.middleware';
 
 @Module({
@@ -20,7 +20,8 @@ import { LoggerMiddleware } from './common/middleware/logger.middleware';
         ],
     }),
     // DatabaseModule,
-  ],
+    EventsModule
+  ]
 })
 export class AppModule {
   constructor(private configService: ConfigService) {
