@@ -28,7 +28,7 @@ export class ChatGateway implements OnGatewayConnection, OnGatewayDisconnect {
     // 客户端发送 "Ready" 事件后，开始每隔 30 秒向该客户端发送消息
     const intervalId = setInterval(() => {
       client.emit('message', { message: '这是定时发送的消息' });
-    }, 30000);
+    }, 10000);
 
     // 当客户端断开连接时，清除定时器
     client.on('disconnect', () => {

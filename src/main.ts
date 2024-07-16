@@ -12,7 +12,11 @@ async function bootstrap() {
   app.useGlobalPipes(new ValidationPipe());
 
   // set base path
-  app.setGlobalPrefix('/');
+  app.setGlobalPrefix('v1');
+
+  app.enableCors({
+    origin: '*', // 或者指定具体的域名，如 'http://localhost:4200'
+  });
 
   // swagger config
   const config = new DocumentBuilder()
