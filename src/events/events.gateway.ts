@@ -4,10 +4,10 @@ import { map } from 'rxjs/operators';
 import { Socket, Server } from 'socket.io';
 
 const instructions = [
-  "前往网站首页",
-  "搜索 AI 微博",
-  "点击第一条微博搜索结果",
-  "转发这条微博"
+  "前往微博首页",
+  "搜索关键词微博'AI'",
+  "点击第一条搜索结果微博，查看详情",
+  "评论这条微博'so coooool'，并点击评论按钮发送评论"
 ]
 
 @WebSocketGateway({
